@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "bierner.markdown-preview-github-styles",
+    "davidanson.vscode-markdownlint",
+    "dbaeumer.vscode-eslint",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "foxundermoon.shell-format",
+    "irongeek.vscode-env",
+    "mike-co.import-sorter",
+    "yzhang.markdown-all-in-one"
+  ]
+}
