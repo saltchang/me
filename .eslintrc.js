@@ -18,6 +18,7 @@ module.exports = {
   },
   extends: [
     'eslint:recommended', // eslint
+    'plugin:@next/next/recommended', // next
     'plugin:@typescript-eslint/eslint-recommended', // typescript
     'plugin:@typescript-eslint/recommended', // typescript
     'plugin:eslint-comments/recommended', // eslint-comments

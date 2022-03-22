@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import styled from 'styled-components';
 
 export const MainContainer = styled.main`
@@ -16,7 +15,7 @@ export const AvatarContainer = styled.div`
   margin: var(--space-normal) auto;
 `;
 
-export const Avatar = styled(Image)`
+export const Avatar = styled.img`
   border-radius: 50%;
 `;
 

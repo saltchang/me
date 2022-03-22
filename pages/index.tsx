@@ -3,7 +3,6 @@ import { FaBook, FaGithubAlt, FaLinkedin, FaTwitter } from 'react-icons/fa';
 
 import TypingMotion from 'components/typing-motion';
 
-import ImgAvatar from '../images/Kuroko_AAA.jpeg';
 import {
   Avatar,
   AvatarContainer,
@@ -29,7 +28,7 @@ const Home: NextPage = () => {
       <MainContainer>
         <AvatarContainer>
           <Avatar
-            src={ImgAvatar}
+            src="../images/Kuroko_AAA.jpeg"
             alt="Salt Chang"
             width={192}
             height={192}
