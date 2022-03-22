@@ -1,0 +1,23 @@
+:root {
+  // fs: font size
+  --fs-base: 14px;
+  --fs-large: 18px;
+  --fs-header: 28px;
+
+  // fw: font weight
+  --fw-thin: 100;
+  --fw-exLight: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semiBold: 600;
+  --fw-bold: 700;
+  --fw-exBold: 800;
+  --fw-black: 900;
+
+  // fm: font family
+  --fm-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --fm-code: 'Fira Code VF', 'Fira Code', source-code-pro, Menlo, Monaco,
+    Consolas, 'Courier New', monospace;
+}

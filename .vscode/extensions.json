@@ -6,8 +6,9 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "foxundermoon.shell-format",
-    "irongeek.vscode-env",
     "mike-co.import-sorter",
+    "mikestead.dotenv",
+    "vunguyentuan.vscode-css-variables",
     "yzhang.markdown-all-in-one"
   ]
 }

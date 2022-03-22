@@ -1,0 +1,21 @@
+:root {
+  --color-bg-main: #ffffff;
+  --color-bg-mist: #f0f0f0;
+  --color-bg-milk: #dbdbdb;
+
+  --color-dark: #171749;
+  --color-amber: #ffbf00;
+  --color-sea: #4242ff;
+  --color-berry: #ab0b23;
+}
+
+[data-theme='dark'] {
+  --color-bg-main: #141429;
+  --color-bg-mist: #2d2d44;
+  --color-bg-milk: #3a3a53;
+
+  --color-dark: #c5c5dd;
+  --color-amber: #ff7e00;
+  --color-sea: #2121ff;
+  --color-berry: #da3850;
+}

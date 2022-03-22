@@ -21,8 +21,6 @@ module.exports = {
     'plugin:@typescript-eslint/eslint-recommended', // typescript
     'plugin:@typescript-eslint/recommended', // typescript
     'plugin:eslint-comments/recommended', // eslint-comments
-    'plugin:functional/external-recommended', // functional
-    'plugin:functional/lite', // functional
     'plugin:import/recommended', // import
     'plugin:import/typescript', // import
     'plugin:jsx-a11y/recommended', // jsx-ally
@@ -30,10 +28,8 @@ module.exports = {
     'plugin:promise/recommended', // promise
     'plugin:react-hook-form/recommended', // react
     'plugin:react-hooks/recommended', // react
-    'plugin:react-perf/recommended', // react
     'plugin:react/recommended', // react
     'plugin:regexp/recommended', // regexp
-    'plugin:security/recommended', // security
     'plugin:testing-library/dom', // testing
     'plugin:testing-library/react', // testing
     'plugin:unicorn/recommended', // unicorn
@@ -41,7 +37,6 @@ module.exports = {
   ],
   plugins: [
     '@typescript-eslint',
-    'functional',
     'immutable',
     'import',
     'jsx-a11y',
@@ -50,21 +45,13 @@ module.exports = {
     'promise',
     'react-hook-form',
     'react-hooks',
-    'react-perf',
     'react',
     'regexp',
-    'security',
     'testing-library',
     'unicorn',
   ],
   rules: {
     eqeqeq: ['error', 'smart'],
-    'functional/functional-parameters': [
-      'error',
-      {
-        enforceParameterCount: false,
-      },
-    ],
     'linebreak-style': ['error', 'unix'],
     'prefer-const': ['error'],
     'prefer-arrow/prefer-arrow-functions': [
@@ -104,8 +91,6 @@ module.exports = {
       ],
       parser: '@babel/eslint-parser',
       rules: {
-        'functional/immutable-data': 'off',
-        'functional/no-expression-statement': 'off',
         'unicorn/prefer-module': 'off',
       },
     },
