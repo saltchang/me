@@ -35,6 +35,12 @@ export const ContactInfoList = styled.div`
   justify-content: space-between;
   align-items: center;
   font-size: var(--fs-large);
+
+  a {
+    padding: var(--space-small);
+    display: flex;
+    align-items: center;
+  }
 `;
 
 export const TypingMotionBox = styled.div`

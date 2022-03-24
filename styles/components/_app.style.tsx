@@ -10,5 +10,5 @@ export const Header = styled.header`
   position: relative;
   text-align: right;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 `;

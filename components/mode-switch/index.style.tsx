@@ -15,4 +15,10 @@ export const ModeSwitchContainer = styled.div`
     transition: background-color 200ms;
     background-color: var(--color-bg-milk);
   }
+
+  &:active,
+  &:visited,
+  &:focus {
+    outline: none;
+  }
 `;
