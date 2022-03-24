@@ -114,9 +114,9 @@ const TypingMotion = ({
         {stringsToType && stringsToType.length > 0
           ? stringsToType[typingStringId].slice(0, typingCharId)
           : undefined}
-        <div className={`text-cursor ${isBlink ? 'blink' : ''}`}>
+        <span className={`text-cursor ${isBlink ? 'blink' : ''}`}>
           {withTag ? '<' : '\u00A0'}
-        </div>
+        </span>
       </span>
       {withTag ? (
         <span className="tag">

@@ -32,7 +32,9 @@ const TypingMotionContainer = styled.div<Props>`
     props.codeBlock ? color.backgroundColor : 'transparent'};
 
   .tag {
+    display: inline;
     .tag-name {
+      display: inline;
       color: ${color.tagColor};
     }
   }
@@ -41,7 +43,7 @@ const TypingMotionContainer = styled.div<Props>`
     min-height: ${textSize};
     white-space: pre-wrap;
     box-sizing: content-box;
-    display: inline-block;
+    display: inline;
 
     .text-cursor {
       color: ${color.cursorTextColor};
