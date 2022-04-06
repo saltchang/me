@@ -10,37 +10,37 @@ export const FooterContainer = styled.footer`
   /* height: var(--footer-height); */
 `;
 
-export const AvatarContainer = styled.div`
+export const AvatarContainer = styled.a`
+  display: flex;
+  position: relative;
+  width: 192px;
+  height: 192px;
+  border-radius: 50%;
+  overflow: hidden;
+  mask-image: radial-gradient(white, black);
   text-align: center;
   margin: var(--space-normal) auto;
+
+  img {
+    transition: transform 300ms;
+    transform: scale(1.03);
+  }
+
+  &:hover {
+    img {
+      transform: scale(1.2);
+    }
+  }
 `;
 
-export const Avatar = styled.img`
-  border-radius: 50%;
-`;
+export const Avatar = styled.img``;
 
 export const Title = styled.h2`
+  cursor: default;
   text-align: center;
   font-size: var(--fs-header);
   font-weight: var(--fw-semiBold);
   margin-bottom: var(--space-double);
-`;
-
-export const ContactInfoList = styled.div`
-  min-width: 250px;
-  max-width: 360px;
-  width: 75%;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: var(--fs-large);
-
-  a {
-    padding: var(--space-small);
-    display: flex;
-    align-items: center;
-  }
 `;
 
 export const TypingMotionBox = styled.div`
