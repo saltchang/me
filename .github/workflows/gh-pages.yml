@@ -13,7 +13,7 @@ jobs:
 
       - name: Install and Build 🔧
         run: |
-          yarn --production
+          yarn workspaces focus
           yarn build
           touch build/.nojekyll
 
