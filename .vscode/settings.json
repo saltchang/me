@@ -1,44 +1,26 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.formatOnSaveMode": "file",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": [
+    "source.fixAll.format",
+    "source.fixAll.eslint",
+    "source.addMissingImports"
+  ],
   "eslint.validate": [
     "javascript",
     "javascriptreact",
     "typescript",
     "typescriptreact"
   ],
-  "importSorter.generalConfiguration.sortOnBeforeSave": true,
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.count": 80,
-  "importSorter.importStringConfiguration.maximumNumberOfImportExpressionsPerLine.type": "newLineEachExpressionAfterCountLimitExceptIfOnlyOne",
-  "importSorter.importStringConfiguration.tabSize": 2,
-  "importSorter.importStringConfiguration.trailingComma": "multiLine",
-  "importSorter.sortConfiguration.customOrderingRules.rules": [
-    {
-      "orderLevel": 50,
-      "regex": "^$",
-      "type": "importMember"
-    },
-    {
-      "orderLevel": 10,
-      "regex": "^react[[-]?.*]*$"
-    },
-    {
-      "orderLevel": 20,
-      "regex": "^[^.@]"
-    },
-    {
-      "orderLevel": 30,
-      "regex": "^[@]"
-    },
-    {
-      "orderLevel": 40,
-      "regex": "^[.]"
-    }
-  ],
+  "files.associations": {
+    "*.env": "env",
+    "*.env.*": "env"
+  },
+  "search.exclude": {
+    "node_modules": true
+  },
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "typescript.preferences.importModuleSpecifier": "shortest",
   "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   }

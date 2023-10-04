@@ -1,16 +1,18 @@
-import styled from 'styled-components';
-
-export const MainContainer = styled.main`
+.mainContainer {
   width: 100%;
-  min-height: calc(100% - var(--footer-height));
   padding: var(--space-normal);
-`;
+}
 
-export const FooterContainer = styled.footer`
-  /* height: var(--footer-height); */
-`;
+.mainHeader {
+  font-size: var(--fs-large);
+  padding: var(--space-normal);
+  position: relative;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
 
-export const AvatarContainer = styled.a`
+.avatarContainer {
   display: flex;
   position: relative;
   width: 192px;
@@ -31,19 +33,17 @@ export const AvatarContainer = styled.a`
       transform: scale(1.2);
     }
   }
-`;
+}
 
-export const Avatar = styled.img``;
-
-export const Title = styled.h2`
+.title {
   cursor: default;
   text-align: center;
   font-size: var(--fs-header);
   font-weight: var(--fw-semiBold);
   margin-bottom: var(--space-double);
-`;
+}
 
-export const TypingMotionBox = styled.div`
+.typingMotionBox {
   margin: var(--space-double) auto;
   width: fit-content;
-`;
+}

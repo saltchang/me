@@ -1,0 +1,51 @@
+.typingMotionContainer {
+  font-size: var(--fs-base);
+  padding: var(--space-mini);
+
+  display: inline-block;
+  font-family: var(--fm-code);
+  color: var(--color-dark);
+
+  border-radius: 4px;
+  background-color: var(--color-bg-main);
+
+  .tag {
+    display: inline;
+    .tagName {
+      display: inline;
+      color: var(--color-berry);
+    }
+  }
+
+  .typingText {
+    min-height: var(--fs-base);
+    white-space: pre-wrap;
+    box-sizing: content-box;
+    display: inline;
+
+    .textCursor {
+      color: var(--color-sea);
+      height: calc(var(--fs-base) + 1px);
+      display: inline-block;
+      padding-top: 1px;
+      margin-left: 1px;
+      background: var(--color-amber);
+
+      &.blink {
+        animation: borderBlink 750ms step-end infinite;
+      }
+    }
+  }
+
+  @keyframes borderBlink {
+    from,
+    to {
+      color: var(--color-sea);
+      background: var(--color-amber);
+    }
+    50% {
+      color: var(--color-dark);
+      background: transparent;
+    }
+  }
+}

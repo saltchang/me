@@ -1,12 +1,14 @@
-import React, { useCallback, useEffect, useState } from 'react';
+'use client';
 
-import TypingMotionContainer from './index.style';
+import { memo, useCallback, useEffect, useState } from 'react';
+
+import styles from './index.module.scss';
 
 interface TypingMotionProps {
   readonly withTag?: string;
   readonly codeStyle?: boolean;
   readonly baseText?: string;
-  readonly stringsToType: readonly string[];
+  readonly stringsToType?: readonly string[];
   readonly codeBlock?: boolean;
 }
 
@@ -16,12 +18,6 @@ const INIT_TYPING_CHAR_ID = 0;
 const DELAY_TIME_TO_SWITCH_SENTENCE = 2000;
 const DELAY_TIME_TO_START_TYPING = 1000;
 
-// const clearAllTimeout = (): void => {
-//   Array.from({ length: window.setTimeout(() => 0) })
-//     .fill(0)
-//     .map((_, i) => window.clearTimeout(i));
-// };
-
 const getTypeDelay = () => {
   const isLongDelay = Math.floor(Math.random() * Math.floor(20)) === 1;
   const randomShortDelay = 100 + 10 * Math.floor(Math.random() * Math.floor(3));
@@ -30,11 +26,16 @@ const getTypeDelay = () => {
   return randomShortDelay + randomLongDelay;
 };
 
+const defaultStringsToType = [
+  'A web developer.',
+  'A software engineer.',
+  'A creator.',
+];
+
 const TypingMotion = ({
-  withTag,
+  withTag = 'code',
   baseText = '',
-  stringsToType,
-  codeBlock = false,
+  stringsToType = defaultStringsToType,
 }: TypingMotionProps) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [isBlink, setIsBlink] = useState(false);
@@ -99,36 +100,38 @@ const TypingMotion = ({
   }, [typingCharId, isDeleting, typeText, deleteText]);
 
   return (
-    <TypingMotionContainer codeBlock={codeBlock}>
+    <div className={styles.typingMotionContainer}>
       {withTag ? (
-        <span className="tag">
+        <span className={styles.tag}>
           {'<'}
-          <span className="tag-name">{withTag}</span>
+          <span className={styles.tagName}>{withTag}</span>
           {'>'}
         </span>
       ) : (
         <></>
       )}
       {baseText.replace(' ', '\u00A0')}
-      <span className="typing-text">
+      <span className={styles.typingText}>
         {stringsToType && stringsToType.length > 0
           ? stringsToType[typingStringId].slice(0, typingCharId)
           : undefined}
-        <span className={`text-cursor ${isBlink ? 'blink' : ''}`}>
+        <span
+          className={`${styles.textCursor} ${isBlink ? `${styles.blink}` : ''}`}
+        >
           {withTag ? '<' : '\u00A0'}
         </span>
       </span>
       {withTag ? (
-        <span className="tag">
+        <span className={styles.tag}>
           {'/'}
-          <span className="tag-name">{withTag}</span>
+          <span className={styles.tagName}>{withTag}</span>
           {'>'}
         </span>
       ) : (
         <></>
       )}
-    </TypingMotionContainer>
+    </div>
   );
 };
 
-export default TypingMotion;
+export default memo(TypingMotion);
