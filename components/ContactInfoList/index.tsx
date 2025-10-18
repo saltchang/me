@@ -1,5 +1,6 @@
 import { memo } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa6';
+import { HiMiniIdentification } from 'react-icons/hi2';
 import { PiArticleMediumBold } from 'react-icons/pi';
 import Link from 'next/link';
 
@@ -7,18 +8,23 @@ import styles from './index.module.scss';
 
 const linkItems = [
   {
+    title: 'Resume',
+    link: 'https://www.figma.com/design/MeG7mWfSaiuhOHrBatcYhx/Salt-s-Resume?node-id=0-1&t=noLaQTPBdmTDBdYV-1',
+    icon: <HiMiniIdentification />,
+  },
+  {
+    title: 'GitHub',
+    link: 'https://github.com/saltchang',
+    icon: <FaGithub />,
+  },
+  {
     title: 'LinkedIn',
     link: 'https://www.linkedin.com/in/saltchang',
     icon: <FaLinkedin />,
   },
   {
-    title: 'GitHub',
-    link: 'https://github.com/saltchang/me',
-    icon: <FaGithub />,
-  },
-  {
     title: 'Email',
-    link: 'mailto:saltchang@outlook.com',
+    link: 'mailto:me@saltchang.com',
     icon: <FaEnvelope />,
   },
   {

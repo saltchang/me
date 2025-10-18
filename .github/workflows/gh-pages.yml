@@ -11,15 +11,15 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
-      - name: Install Node.js 18 📗
+      - name: Install Node.js 📗
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install pnpm 🔧
         uses: pnpm/action-setup@v2
         with:
-          version: 8
+          version: 10
 
       - name: Get pnpm store directory 📁
         shell: bash
@@ -41,7 +41,7 @@ jobs:
         run: pnpm build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        uses: JamesIves/github-pages-deploy-action@v4.7.3
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: out # The folder the action should deploy.

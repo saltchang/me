@@ -28,7 +28,7 @@
       height: calc(var(--fs-base) + 1px);
       display: inline-block;
       padding-top: 1px;
-      margin-left: 1px;
+      margin-left: 0;
       background: var(--color-amber);
 
       &.blink {
