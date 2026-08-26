@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 const linkItems = [
   {
     title: 'Resume',
-    link: 'https://www.figma.com/design/MeG7mWfSaiuhOHrBatcYhx/Salt-s-Resume?node-id=0-1&t=noLaQTPBdmTDBdYV-1',
+    link: 'https://docs.google.com/document/d/1SP1_at4QTCF3yQBrGgZw2wcgn_amdWXmUKiq07sm7SQ/edit?usp=sharing',
     icon: <HiMiniIdentification />,
   },
   {
