@@ -9,7 +9,7 @@ import styles from './index.module.scss';
 const linkItems = [
   {
     title: 'Resume',
-    link: 'https://docs.google.com/document/d/1SP1_at4QTCF3yQBrGgZw2wcgn_amdWXmUKiq07sm7SQ/edit?usp=sharing',
+    link: 'https://drive.google.com/file/d/1BWVx8NnWhq7vLyE8vkSXFMRuVeB1VQ2t/view?usp=sharing',
     icon: <HiMiniIdentification />,
   },
   {
