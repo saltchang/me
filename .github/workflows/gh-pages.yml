@@ -9,30 +9,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v3
-
-      - name: Install Node.js 📗
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
+        uses: actions/checkout@v7
 
       - name: Install pnpm 🔧
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v6
         with:
           version: 10
 
-      - name: Get pnpm store directory 📁
-        shell: bash
-        run: |
-          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-
-      - name: Setup pnpm cache 📦
-        uses: actions/cache@v3
+      - name: Install Node.js 📗
+        uses: actions/setup-node@v7
         with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
+          node-version-file: .nvmrc
+          cache: pnpm
 
       - name: Install dependencies 📦
         run: pnpm install
@@ -41,7 +29,7 @@ jobs:
         run: pnpm build
 
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.7.3
+        uses: JamesIves/github-pages-deploy-action@v4.9.0
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: out # The folder the action should deploy.

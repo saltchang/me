@@ -2,3 +2,6 @@ onlyBuiltDependencies:
   - '@parcel/watcher'
   - sharp
   - unrs-resolver
+overrides:
+  # next 15 pins postcss 8.4.31, which has known CVEs
+  'next>postcss': ^8.5.23
